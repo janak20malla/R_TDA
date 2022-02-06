@@ -28,7 +28,7 @@ source('~/Desktop/R_TDA/Key.R')
 #Get acount information
 library(rameritrade)
 refreshToken = readRDS('~/Desktop/R_TDA/refreshToken')
-consumerKey = 'consumerKey'
+consumerKey = consumerKey
 accessToken = rameritrade::td_auth_accessToken(consumerKey, refreshToken)
 
 #Account information
@@ -40,7 +40,7 @@ accessToken = rameritrade::td_auth_accessToken(consumerKey, refreshToken)
 
 #Get Quote prices
 
-SP500Qt = rameritrade::td_priceQuote(c('SPY', 'IVV', 'VOO', 'AMZN', 'TSLA'))
+SP500Qt = rameritrade::td_priceQuote(c('SPY', 'IVV', 'VOO', 'AMZN', 'TSLA', 'AAPL'))
 str(SP500Qt)
 View(SP500Qt)
 
